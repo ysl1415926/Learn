@@ -1,0 +1,19 @@
+The audit code found that the parameters inserted into the database were not strictly filtered
+
+![image](https://github.com/ysl1415926/cve/assets/138963581/e4bbab10-8124-4960-a5a1-d0f67f92f58e)
+
+The background accesses the stepselect_main.php and finds a new category group
+![image](https://github.com/ysl1415926/cve/assets/138963581/c6ab0925-d544-4179-bdb3-013b922b0c1d)
+
+
+The parameter used is exactly the one that the code is unfiltered by itemname&egroup
+
+![image](https://github.com/ysl1415926/cve/assets/138963581/255e968d-f7e4-4f22-8191-446ef35ba5a3)
+
+Let's insert a pop-up window XSS into the itemname
+
+![image](https://github.com/ysl1415926/cve/assets/138963581/b032a3b5-3c24-4550-85d3-8c55d878792d)
+
+Back in the background, the XSS success pop-up window
+
+![image](https://github.com/ysl1415926/cve/assets/138963581/345f50bc-d6ab-4dff-956e-ca8578e51338)
